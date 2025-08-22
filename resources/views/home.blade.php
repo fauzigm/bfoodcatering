@@ -1,203 +1,273 @@
 <x-layout>
-    <!-- Tagline Section -->
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">
-            Ciptakan Momen Tak Terlupakan di Malang dan Batu
-        </h2>
-        <p class="w-full h-full text-center text-black text-base font-light break-words">
-            Selamat datang di BFood Catering! Kami hadir untuk menjadikan setiap acara Anda di Malang dan Batu lebih
-            istimewa. Dengan pengalaman lebih dari 5 tahun, kami ahli dalam menyajikan hidangan lezat dan tak
-            terlupakan untuk berbagai kebutuhan, mulai dari prasmanan wisatawan hingga pernikahan impian dan pesta
-            pribadi Anda.
-        </p>
-        <p class="text-gray-600 mt-2">
-            Layanan terbaik untuk acara Anda Mulai!
-        </p>
-    </section>
+    <!-- Hero Section -->
+    <section
+        class="flex max-w-full px-4 xl:px-6 lg:px-8 mx-6 my-24 md:my-16 lg:my-12 min-h-screen max-w-5xl bg-gradient-custom hero-bg items-center justify-center overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-overlay">
+            <img src="{{ asset('images/hero.jpg') }}" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <!-- Main Content -->
+        <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-0">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Content -->
+                <div class="max-w-xl text-white space-y-6 lg:space-y-8 text-center lg:text-left">
+                    <div class="space-y-4">
+                        <h1
+                            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
+                            Simple Food
+                            <span class="block text-white">Great Test</span>
+                        </h1>
+                        <p
+                            class="text-base sm:text-lg md:text-xl text-gray-200 animate-fade-in-left max-w-lg mx-auto lg:mx-0">
+                            Hidangan berkualitas premium dengan cita rasa autentik untuk acara spesial Anda.
+                            Dari intimate dinner hingga grand celebration.
+                        </p>
+                    </div>
 
-    <!-- Services Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">
-            Kami Menawarkan<br>
-            Semua Opsi
-        </h2>
-
-        <div class="flex flex-col md:flex-row lg:flex-row gap-14 justify-center items-center">
-
-            <!-- Card 1 - Rice Bowl -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-300 transform -mt-24"
-                style="width: 289px; height: 434px">
-                <img src="images/ricebowlpaper.jpg" alt=""
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-
-                <!-- Progressive Blur Effect -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/10 dark:via-gray-900/10 dark:to-gray-900/10 backdrop-blur-none">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5 dark:to-gray-900/5"
-                    style="backdrop-filter: blur(20px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
-                    style="backdrop-filter: blur(35px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
-                </div>
-
-                <!-- Content -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 animate__animated animate__fadeInUp animate__delay-1s">
-                    <div>
-                        <h3
-                            class="text-2xl font-bold text-white animate__animated animate__fadeInRight animate__delay-1s">
-                            Rice Bowl</h3>
-                        <p class="text-gray-200 mt-1 animate__animated animate__fadeInRight animate__delay-1-5s">
-                            Kelezatan Dalam Satu Mangkuk</p>
+                    <!-- CTA Buttons -->
+                    <div
+                        class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-right justify-center lg:justify-start">
                         <button
-                            class="mt-3 px-4 py-2 bg-secondary/80 text-white rounded-lg hover:bg-secondary dark:bg-primary dark:hover:bg-blue-700">
-                            Lihat Paket
+                            class="group bg-primary hover:bg-primary text-gray-900 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                            <span class="flex items-center text-white justify-center gap-2">
+                                <i class="fas fa-utensils text-white text-sm sm:text-base"></i>
+                                Lihat Menu Kami
+                                <i
+                                    class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm sm:text-base"></i>
+                            </span>
+                        </button>
+                        <button
+                            class="group border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+                            <span class="flex items-center justify-center gap-2">
+                                <i class="fas fa-phone text-sm sm:text-base"></i>
+                                Konsultasi Gratis
+                            </span>
                         </button>
                     </div>
-                </div>
-            </div>
 
-            <!-- Card 2 - Rice Box -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-300"
-                style="width: 289px; height: 434px">
-                <img src="images/rice box.jpeg" alt="Bali, Indonesia"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/10 dark:via-gray-900/10 dark:to-gray-900/10 backdrop-blur-none">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5 dark:to-gray-900/5"
-                    style="backdrop-filter: blur(20px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
-                    style="backdrop-filter: blur(35px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
-                </div>
-
-                <!-- Content -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Rice Box</h3>
-                        <p class="text-gray-200 mt-1">Solusi Cepat untuk Perut Kenyang</p>
-                        <button
-                            class="mt-3 px-4 py-2 bg-secondary/80 text-white rounded-lg hover:bg-secondary dark:bg-primary dark:hover:bg-blue-700">
-                            Lihat Paket
-                        </button>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 lg:pt-8 animate-fade-in-up"
+                        style="animation-delay: 0.6s;">
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary">500+</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Acara Sukses</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary">50+</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Menu Pilihan</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary">5★</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Rating Client</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card 3 - Buffet -->
-            <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-300 -mt-24"
-                style="width: 289px; height: 434px">
-                <img src="images/buffet.jpg" alt="Europe"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/10 dark:via-gray-900/10 dark:to-gray-900/10 backdrop-blur-none">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5 dark:to-gray-900/5"
-                    style="backdrop-filter: blur(20px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
-                    style="backdrop-filter: blur(35px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
-                </div>
-
-                <!-- Content -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Buffet</h3>
-                        <p class="text-gray-200 mt-1">Pesta Rasa Sepuasnya!</p>
-                        <button
-                            class="mt-3 px-4 py-2 bg-secondary/80 text-white rounded-lg hover:bg-secondary dark:bg-primary dark:hover:bg-blue-700">
-                            Lihat Paket
-                        </button>
+                <!-- Right Content - Image -->
+                <div class="relative animate-fade-in-right order-first lg:order-last flex justify-center">
+                    <div class="relative z-10 animate-pulse-slow max-w-sm lg:max-w-none">
+                        <img src="{{ asset('images/hero_elemen.png') }}" alt="" class="w-full h-full">
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 transform translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
     </section>
 
-    <!-- Catering Services Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Private Event -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <span class="text-gray-600">👥 Private Event Photo</span>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Private Event</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Rayakan ulang tahun, arisan, atau acara keluarga lainnya tanpa repot. Kami siap melayani
-                        kebutuhan katering Anda dengan hidangan yang lezat dan penyajian yang menarik. Fokuslah
-                        menikmati momen bersama orang-orang terkasih, biarkan kami yang mengurus semua urusan dapur.
-                    </p>
-                </div>
-            </div>
+    <!-- 3D Card Sldier -->
+    <section id="tranding"
+        class="flex max-w-full px-4 sm:px-6 lg:px-8 mx-6 my-24 md:my-16 lg:my-12 items-center min-h-screen px-16">
 
-            <!-- Wedding Catering -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                <div class="lg:order-2">
-                    <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span class="text-gray-600">💒 Wedding Catering</span>
+        <div class="container max-w-xl">
+            <div class="swiper tranding-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img w-full h-full">
+                            <img src="images/paperbowl.png" alt="Tranding">
+                        </div>
+                        <div class="rounded-lg">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-b from-transparent via-gray/10 to-gray/10 dark:via-gray-900/10 dark:to-gray-900/20 backdrop-blur-none">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray/5 dark:to-gray-900/5"
+                                style="backdrop-filter: blur(120px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
+                                style="backdrop-filter: blur(150px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
+                            </div>
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price"></h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h2 class="text-3xl px-2 text-white font-bold">
+                                    Rice Bowl
+                                </h2>
+                                <h3 class="food-rating">
+                                    <button
+                                        class="group bg-primary hover:bg-primary text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                                        <span class="flex items-center text-white justify-center gap-2">
+                                            <i class="fas fa-utensils text-white text-sm sm:text-base"></i>
+                                            Lihat Menu
+                                            <i
+                                                class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm sm:text-base"></i>
+                                        </span>
+                                    </button>
+                                    <!-- <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div> -->
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="lg:order-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wedding Catering</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Wujudkan pernikahan impian Anda bersama BFood Catering. Kami menawarkan beragam pilihan menu
-                        prasmanan yang bisa disesuaikan dengan tema dan anggaran Anda. Mulai dari hidangan
-                        tradisional hingga internasional, setiap sajian kami ciptakan dengan cinta untuk merayakan
-                        hari bahagia Anda.
-                    </p>
-                    <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
-                        Order
-                    </button>
-                </div>
-            </div>
-
-            <!-- Catering Wisata -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <span class="text-gray-600">🏞️ Tourism Catering</span>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Catering Wisata</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Jadikan perjalanan Anda di Malang dan Batu semakin berkesan dengan hidangan khas yang
-                        otentik. Kami menyediakan menu prasmanan lengkap dan praktis, cocok untuk rombongan wisata,
-                        tur sekolah, atau acara grup lainnya. Rasakan cita rasa lokal yang kaya, dimasak dengan
-                        bahan-bahan segar pilihan
-                    </p>
-                </div>
-            </div>
-
-            <!-- Jumat Berkah -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="lg:order-2">
-                    <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span class="text-gray-600">🕌 Jumat Berkah</span>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img w-full h-full">
+                            <img src="images/ricebox.png" alt="Tranding">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-gray/10 to-gray/10 dark:via-gray-900/10 dark:to-gray-900/20 backdrop-blur-none">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray/5 dark:to-gray-900/5"
+                            style="backdrop-filter: blur(80px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
+                            style="backdrop-filter: blur(100px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price"></h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h2 class="text-3xl px-2 text-white font-bold">
+                                    Nasi Kotak
+                                </h2>
+                                <h3 class="food-rating">
+                                    <button
+                                        class="group bg-primary hover:bg-primary text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                                        <span class="flex items-center text-white justify-center gap-2">
+                                            <i class="fas fa-utensils text-white text-sm sm:text-base"></i>
+                                            Lihat Menu
+                                            <i
+                                                class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm sm:text-base"></i>
+                                        </span>
+                                    </button>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img w-full h-full">
+                            <img src="images/buffet.png" alt="Tranding">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-gray/10 to-gray/10 dark:via-gray-900/10 dark:to-gray-900/20 backdrop-blur-none">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray/5 dark:to-gray-900/5"
+                            style="backdrop-filter: blur(80px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
+                            style="backdrop-filter: blur(100px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price"></h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h2 class="text-3xl px-2 text-white font-bold">
+                                    Buffet/Prasmanan
+                                </h2>
+                                <h3 class="food-rating">
+                                    <button
+                                        class="group bg-primary hover:bg-primary text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                                        <span class="flex items-center text-white justify-center gap-2">
+                                            <i class="fas fa-utensils text-white text-sm sm:text-base"></i>
+                                            Lihat Menu
+                                            <i
+                                                class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm sm:text-base"></i>
+                                        </span>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide-end -->
+                    <!-- Slide-start -->
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img w-full h-full">
+                            <img src="images/wedding.png" alt="Tranding">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-gray/10 to-gray/10 dark:via-gray-900/10 dark:to-gray-900/20 backdrop-blur-none">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray/5 dark:to-gray-900/5"
+                            style="backdrop-filter: blur(80px); mask:linear-gradient(to bottom, transparent 50%, black 100%)">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/1 dark:to-gray-900/1"
+                            style="backdrop-filter: blur(100px); mask: linear-gradient(to bottom, transparent 60%, black 100%)">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="food-price"></h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h2 class="text-3xl px-2 text-white font-bold">
+                                    Wedding Package
+                                </h2>
+                                <h3 class="food-rating">
+                                    <button
+                                        class="group bg-primary hover:bg-primary text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                                        <span class="flex items-center text-white justify-center gap-2">
+                                            <i class="fas fa-utensils text-white text-sm sm:text-base"></i>
+                                            Lihat Menu
+                                            <i
+                                                class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm sm:text-base"></i>
+                                        </span>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide-end -->
                 </div>
-                <div class="lg:order-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Jumat Berkah</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Ingin bersedekah dan berbagi kebaikan? BFood Catering hadir dengan program Jumat Berbagi
-                        Berkah, layanan khusus bagi Anda yang ingin berpartisipasi dalam kebaikan.
-                        Melalui program ini, Anda bisa menitipkan sedekah dalam bentuk makanan atau minuman melalui
-                        jasa kami. Dengan budget mulai dari Rp10.000, Anda sudah bisa ikut berbagi dan menyebarkan
-                        kebahagiaan. Kami akan memastikan setiap donasi disalurkan kepada mereka yang membutuhkan,
-                        menjadikan sedekah Anda lebih mudah dan berkah melimpah.
 
-                        Mari bersama-sama menebar kebaikan di hari Jumat yang penuh berkah.
-                    </p>
+                <div class="tranding-slider-control">
+                    <div class="swiper-button-prev slider-arrow text-sm">
+                        <ion-icon name="arrow-back-outline" class="text-sm"></ion-icon>
+                    </div>
+                    <div class="swiper-button-next slider-arrow text-sm">
+                        <ion-icon name="arrow-forward-outline" class=""></ion-icon>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
+
             </div>
+        </div>
+        <!-- Tagline Section -->
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Ciptakan Momen Tak Terlupakan Untuk Acara Anda
+            </h2>
+            <p class="w-full h-full text-sm text-center text-black text-base font-light break-words">
+                Selamat datang di BFood Catering! Kami hadir untuk menjadikan setiap acara Anda di Malang dan Batu lebih
+                istimewa. Dengan pengalaman lebih dari 5 tahun, kami ahli dalam menyajikan hidangan lezat dan tak
+                terlupakan untuk berbagai kebutuhan, mulai dari prasmanan wisatawan hingga pernikahan impian dan pesta
+                pribadi Anda.
+            </p>
+            <p class="text-gray-600 mt-2 text-xl">
+                Layanan terbaik untuk acara Anda!
+            </p>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Delicious Menu</h2>
             <!-- <div class="flex justify-center space-x-8 mb-12">
                     <button class="text-primary font-semibold border-b-2 border-primary">Main Dish</button>
@@ -301,20 +371,83 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <blockquote class="text-xl text-gray-700 leading-relaxed mb-8">
-                "I wanted to thank you for inviting me down<br>
-                for that amazing dinner the other night.<br>
-                The food was extraordinary."
-            </blockquote>
 
-            <div class="flex justify-center space-x-4">
-                <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-            </div>
-            <p class="text-gray-600 mt-4">Our Client</p>
-        </div>
-    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(
+                ".absolute.inset-0.bg-cover.bg-center"
+            );
+            const dots = document.querySelectorAll(".dot");
+            const navButtons = document.querySelectorAll(".slider-nav");
+            let currentIndex = 0;
+            let autoSlideInterval;
+
+            function showSlide(index) {
+                // Hapus kelas dan atribut aktif dari slide dan dot sebelumnya
+                slides.forEach((slide) => slide.classList.remove("opacity-100"));
+                slides.forEach((slide) => slide.classList.add("opacity-0"));
+                slides.forEach((slide) => slide.removeAttribute("data-active"));
+                dots.forEach((dot) => dot.classList.remove("active"));
+
+                // Tampilkan slide yang dipilih dan tandai sebagai aktif
+                slides[index].classList.remove("opacity-0");
+                slides[index].classList.add("opacity-100");
+                slides[index].setAttribute("data-active", "");
+                dots[index].classList.add("active");
+
+                // Update currentIndex
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                let newIndex = (currentIndex + 1) % slides.length;
+                showSlide(newIndex);
+            }
+
+            function prevSlide() {
+                let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(newIndex);
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000); // Ganti slide setiap 5 detik
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listener untuk tombol navigasi
+            navButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    stopAutoSlide();
+                    if (button.classList.contains("fa-chevron-right")) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    startAutoSlide(); // Mulai lagi setelah interaksi manual
+                });
+            });
+
+            // Event listener untuk dot navigasi
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    stopAutoSlide();
+                    showSlide(index);
+                    startAutoSlide(); // Mulai lagi setelah interaksi manual
+                });
+            });
+
+            // Hentikan autoslide saat mouse diarahkan ke carousel
+            const sliderSection = document.querySelector("section");
+            sliderSection.addEventListener("mouseenter", stopAutoSlide);
+            sliderSection.addEventListener("mouseleave", startAutoSlide);
+
+            // Inisialisasi: Tampilkan slide pertama
+            showSlide(0);
+            startAutoSlide();
+        });
+
+    </script>
 </x-layout>

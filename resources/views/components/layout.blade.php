@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BFood Catering Batu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.js">
+    @vite('resources/css/app.css')
+
     <script>
         tailwind.config = {
             theme: {
@@ -22,95 +33,44 @@
                 }
             }
         }
+ 
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-    </style>
 </head>
 
-<body class="font-sans bg-gray-50">
+<body class="font-sans">
     <x-navbar></x-navbar>
-    <x-hero></x-hero>
-    <main class="py-16">
+    <main class="w-full">
         {{ $slot }}
     </main>
+    @vite('resources/js/app.js')
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Mobile Menu Toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Slider Functionality
-            const slides = document.querySelectorAll('[style*="background-image"]');
-            const dots = document.querySelectorAll('.dot');
-            const prevBtn = document.querySelector('.fa-chevron-left').parentElement;
-            const nextBtn = document.querySelector('.fa-chevron-right').parentElement;
-
-            let currentSlide = 0;
-            const slideCount = slides.length;
-
-            // Initialize slider
-            function initSlider() {
-                slides[currentSlide].classList.add('opacity-100');
-                slides[currentSlide].setAttribute('data-active', '');
-                dots[currentSlide].classList.add('bg-white', 'scale-125');
-            }
-
-            // Go to specific slide
-            function goToSlide(n) {
-                slides[currentSlide].classList.remove('opacity-100');
-                slides[currentSlide].removeAttribute('data-active');
-                dots[currentSlide].classList.remove('bg-white', 'scale-125');
-
-                currentSlide = (n + slideCount) % slideCount;
-
-                slides[currentSlide].classList.add('opacity-100');
-                slides[currentSlide].setAttribute('data-active', '');
-                dots[currentSlide].classList.add('bg-white', 'scale-125');
-            }
-
-            // Next slide
-            function nextSlide() {
-                goToSlide(currentSlide + 1);
-            }
-
-            // Previous slide
-            function prevSlide() {
-                goToSlide(currentSlide - 1);
-            }
-
-            // Auto slide
-            let slideInterval = setInterval(nextSlide, 6000);
-
-            // Pause on hover
-            const slider = document.querySelector('section');
-            slider.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 6000);
-            });
-
-            // Event listeners
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    goToSlide(index);
-                });
-            });
-
-            // Initialize
-            initSlider();
+        var TrandingSlider = new Swiper(".tranding-slider", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
